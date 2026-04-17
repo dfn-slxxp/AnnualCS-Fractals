@@ -10,25 +10,18 @@ def julia_get_point_as_rgb(x, y, width, height, cx, cy):
     zy = 1.5 - (y / (height - 1)) * 3
 
 
-    scale = julia(zx, zy, cx, cy, R, 0, max_iteration)
+    scale = (julia(zx, zy, cx, cy, R, 0, max_iteration) / max_iteration) ** 0.2
 
-    # color = (0, int(255 - (255 * scale / max_iteration)), 255)
-
-    # return color
-
-    t = scale / max_iteration
-    t = t ** 0.3
-
-    if t == max_iteration:
+    if scale == max_iteration:
         return (5, 10, 90)
 
-    if t < 0.5:
-        u = t / 0.5
+    if scale < 0.5:
+        u = scale / 0.5
         r = 0
         g = int(40 * u)
         b = int(80 + 175 * u)
     else:
-        u = (t - 0.5) / 0.5
+        u = (scale - 0.5) / 0.5
         r = int(180 * u)
         g = int(40 + 215 * u)
         b = 255
