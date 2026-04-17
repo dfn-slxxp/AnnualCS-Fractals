@@ -8,7 +8,7 @@ def color_turtle(t, i, j):
 
 def create_turtle_map(num_x, num_y):
     screen = turtle.Screen()
-    screen.setup(width=num_x * 2, height=num_y * 2)
+    screen.setup(width=num_x * 2.5, height=num_y * 2.5)
 
     turtle.tracer(0)
 
@@ -19,7 +19,7 @@ def create_turtle_map(num_x, num_y):
     for i in range(num_y):
         for j in range(num_x):
 
-            turt.goto(2 * (j - (num_x / 2)), 2 * (i - (num_y / 2)))
+            turt.goto(2 * (j - (num_x / 2)), 2 * ((num_y / 2) - i))
 
             color_turtle(turt, i, j)
             turt.dot(3.5)
