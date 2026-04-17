@@ -2,9 +2,10 @@ import math, turtle
 import color_map
 import julia_math
 
-def color_turtle(t, i, j):
+def colored_dot(t, i, j):
     turtle.colormode(255)
     t.pencolor(color_map.get_color(i, j))
+    t.dot(3.5)
 
 def create_turtle_map(num_x, num_y):
     screen = turtle.Screen()
@@ -21,8 +22,7 @@ def create_turtle_map(num_x, num_y):
 
             turt.goto(2 * (j - (num_x / 2)), 2 * ((num_y / 2) - i))
 
-            color_turtle(turt, i, j)
-            turt.dot(3.5)
+            colored_dot(turt, i, j)
             
     turtle.update()
 
