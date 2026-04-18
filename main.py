@@ -16,7 +16,8 @@ import turtle_functions
 # You can think about it like the array being [a, b]
 # And c = a + bi
 # For some ideas of c values to try, visit https://en.wikipedia.org/wiki/Julia_set#Quadratic_polynomials
-c = [-0.835, -.2321]
+# The following preset is the example in the bottom of the "pseudocode" section
+c = [-0.835, -0.321]
 #
 # This is the "escape radius"
 # It is the boundary that determines whether a point is within the Julia Set
