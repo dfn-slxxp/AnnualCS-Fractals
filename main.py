@@ -34,8 +34,8 @@ max_iteration = 500
 # This will affect how big the map will be, also make it more or less detailed
 # But increasing these will more greatly affect the time it takes to draw
 # Since python's turtle is not instant and can get slow
-width = 200
-height = 200
+width = 300
+height = 300
 #
 # These are the 2 colors the map interpolates between. 
 # The first color, [r, g, b], is the dark color
