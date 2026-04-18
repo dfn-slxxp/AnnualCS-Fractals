@@ -15,10 +15,11 @@ import turtle_functions
 # While the second represents the imaginary part. (second value * i)
 # You can think about it like the array being [a, b]
 # And c = a + bi
+# For some ideas of c values to try, visit https://en.wikipedia.org/wiki/Julia_set#Quadratic_polynomials
 c = [-0.835, -.2321]
 #
 # This is the "escape radius"
-# It is the boundry that determines whether a point is within the Julia Set
+# It is the boundary that determines whether a point is within the Julia Set
 # Leaving it at 2 is generally the best idea
 R = 2
 #
