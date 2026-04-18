@@ -1,12 +1,12 @@
 import turtle
-import color_map
+import mapping
 
 def colored_dot(t, i, j, c_map):
     turtle.colormode(255)
-    t.pencolor(color_map.get_color(i, j, c_map))
+    t.pencolor(mapping.get_color(i, j, c_map))
     t.dot(3)
 
-def create_turtle_map(num_x, num_y, c):
+def create_turtle_map(c, R, max_iteration, num_x, num_y, color1, color2):
     screen = turtle.Screen()
     screen.setup(width=num_x * 1.5, height=num_y * 1.5)
 
@@ -16,14 +16,17 @@ def create_turtle_map(num_x, num_y, c):
     turt.hideturtle()
     turt.pu()
 
-    c_map = color_map.generate_julia_map(num_x, num_y, c)
+    maps = mapping.generate_julia_map(c, R, max_iteration, num_x, num_y, color1, color2)
+
+    iteration_map = maps[0]
+    color_map = maps[1]
     
     for i in range(num_y):
         for j in range(num_x):
 
             turt.goto(j - (num_x / 2), (num_y / 2) - i)
 
-            colored_dot(turt, i, j, c_map)
+            colored_dot(turt, i, j, color_map)
             
     turtle.update()
 
@@ -32,6 +35,14 @@ def create_turtle_map(num_x, num_y, c):
     return turt, screen
 
 c = [-0.835, -.2321]
-width = 600
-height = 600
-create_turtle_map(width, height, c)
+
+R = 2
+max_iteration = 500
+
+width = 500
+height = 500
+
+color1 = [32, 0, 46]
+color2 = [255, 105, 180]
+
+create_turtle_map(c, R, max_iteration, width, height, color1, color2)

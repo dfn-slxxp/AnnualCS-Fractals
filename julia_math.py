@@ -1,32 +1,16 @@
 import sys
+import mapping
 
 sys.setrecursionlimit(5000)
 
-def julia_get_point_as_rgb(x, y, width, height, cx, cy):
-    R = 2
-    max_iteration = 500
+def julia_get_iteration(x, y, width, height, cx, cy, max_iteration, R):
     
     zx = (x / (width - 1)) * 3 - 1.5
     zy = 1.5 - (y / (height - 1)) * 3
 
+    iteration = julia(zx, zy, cx, cy, R, 0, max_iteration)
 
-    scale = (julia(zx, zy, cx, cy, R, 0, max_iteration) / max_iteration) ** 0.2
-
-    if scale == max_iteration:
-        return (5, 10, 90)
-
-    if scale < 0.5:
-        u = scale / 0.5
-        r = 0
-        g = int(40 * u)
-        b = int(80 + 175 * u)
-    else:
-        u = (scale - 0.5) / 0.5
-        r = int(180 * u)
-        g = int(40 + 215 * u)
-        b = 255
-
-    return (r, g, b)
+    return iteration
 
 def julia(zx, zy, cx, cy, R, iteration, max_iteration):
 
