@@ -11,7 +11,7 @@ In order to use this, you must have `python` as well as `turtle` installed. Once
 1.  You must first clone the repository onto your local drive. In a command line, run:\
     ```git clone https://https://github.com/dfn-slxxp/AnnualCS-Fractals.git```
 
-2.  You can use any editor to edit the values in `main.py`. All the editable values and things they do are labelled.\
+2.  You can use any editor to edit the values in `main.py`. All the editable values and things they do are labelled.
 
 3.  Then, `cd` into the folder.\
     ```cd AnnualCS-Fractals```
