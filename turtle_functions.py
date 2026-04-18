@@ -16,10 +16,12 @@ def create_turtle_map(c, R, max_iteration, num_x, num_y, color1, color2):
     turt.hideturtle()
     turt.pu()
 
-    maps = mapping.generate_julia_map(c, R, max_iteration, num_x, num_y, color1, color2)
+    maps = mapping.get_julia_map(c, R, max_iteration, num_x, num_y, color1, color2)
 
     iteration_map = maps[0]
     color_map = maps[1]
+
+    #print(iteration_map)
     
     for i in range(num_y):
         for j in range(num_x):
@@ -39,8 +41,8 @@ c = [-0.835, -.2321]
 R = 2
 max_iteration = 500
 
-width = 500
-height = 500
+width = 200
+height = 200
 
 color1 = [32, 0, 46]
 color2 = [255, 105, 180]
