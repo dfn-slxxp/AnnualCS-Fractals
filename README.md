@@ -8,15 +8,15 @@ The c value(s) can also be changed in `main.py`.
 ## Running the Project
 In order to use this, you must have `python` as well as `turtle` installed. Once those are installed:
 
-1.  You must first clone the repository onto your local drive. In a command line, run:
+1.  You must first clone the repository onto your local drive. In a command line, run:\
     ```git clone https://https://github.com/dfn-slxxp/AnnualCS-Fractals.git```
 
-2.  You can use any editor to edit the values in `main.py`. All the editable values and things they do are labelled.
+2.  You can use any editor to edit the values in `main.py`. All the editable values and things they do are labelled.\
 
-3.  Then, `cd` into the folder.
+3.  Then, `cd` into the folder.\
     ```cd AnnualCS-Fractals```
 
-4.  Run `main.py`. You can do this from within your text editor, or run it through the command line. 
+4.  Run `main.py`. You can do this from within your text editor, or run it through the command line. \
     ```python3 main.py``` or ```py main.py```\
     Whatever works.
 
