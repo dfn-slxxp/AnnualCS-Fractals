@@ -2,6 +2,10 @@ import turtle_functions
 # Welcome to our project!
 #
 # In this file, you can find all the options you *can* customize
+# Note that changing the width and height can make the project severely slower
+# If you're looking to customize the look, experiement with the c value(s) and the colors it interpolates between
+# If you want more detail, change the maximum iteration count
+# Generally an escape radius of 2 is used, but you can experiment with values above 2.
 #
 #
 # With the Julia Set, it can look completely different depending on the c value you add
