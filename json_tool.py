@@ -2,7 +2,7 @@ import json, pathlib
 
 def check_if_julia_cached_exists(x, y, cx, cy, R, max_iteration):
     if pathlib.Path(f'cached/{x}_{y}_{cx}_{cy}_{R}_{max_iteration}.json').is_file():
-        print("Found")
+        print("Cache Found, Using Cache instead of re-calculating Julia Set.")
         return True
     else:
         return False

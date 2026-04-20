@@ -1,4 +1,3 @@
-import random
 import julia_math, json_tool
 
 def interpolate_color(scale, color1, color2):
@@ -31,7 +30,6 @@ def get_julia_map(c, R, max_iteration, x, y, color1, color2):
 
         maps = [iteration_map, color_maps(iteration_map, max_iteration, color1, color2)]
         json_tool.write_julia_to_cache(x, y, c[0], c[1], R, max_iteration, iteration_map)
-        #print("Cached File not Found, Calculated and Cached")
 
         return maps
 

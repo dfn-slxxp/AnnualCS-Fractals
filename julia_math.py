@@ -1,5 +1,4 @@
 import sys
-import mapping
 
 sys.setrecursionlimit(5000)
 

@@ -21,8 +21,6 @@ def create_julia_set_map(c, R, max_iteration, num_x, num_y, color1, color2):
     iteration_map = maps[0]
     color_map = maps[1]
 
-    #print(iteration_map)
-    
     for i in range(num_y):
         for j in range(num_x):
 
@@ -34,4 +32,4 @@ def create_julia_set_map(c, R, max_iteration, num_x, num_y, color1, color2):
 
     turtle.done()
 
-    return turt, screen
+    return turt, screen, iteration_map
