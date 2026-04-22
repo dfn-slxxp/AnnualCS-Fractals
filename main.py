@@ -21,7 +21,7 @@ import turtle_functions
 # And c = a + bi
 # For some ideas of c values to try, visit https://en.wikipedia.org/wiki/Julia_set#Quadratic_polynomials
 # The following preset is the example in the bottom of the "pseudocode" section
-c = [-0.835, -0.321]
+c = [-0.5125, -0.5213]
 #
 # This is the "escape radius"
 # It is the boundary that determines whether a point is within the Julia Set
@@ -38,8 +38,8 @@ max_iteration = 500
 # This will affect how big the map will be, also make it more or less detailed
 # But increasing these will more greatly affect the time it takes to draw
 # Since python's turtle is not instant and can get slow
-width = 300
-height = 300
+width = 200
+height = 200
 #
 # These are the 2 colors the map interpolates between. 
 # The first color, [r, g, b], is the dark color

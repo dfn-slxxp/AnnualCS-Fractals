@@ -4,8 +4,8 @@ sys.setrecursionlimit(5000)
 
 def julia_get_iteration(x, y, width, height, cx, cy, max_iteration, R):
     
-    zx = (x / (width - 1)) * 3 - 1.5
-    zy = 1.5 - (y / (height - 1)) * 3
+    zx = (x / (width - 1)) * (1.5 * R) - (0.75 * R)
+    zy = (0.75 * R) - (y / (height - 1)) * (1.5 * R)
 
     iteration = julia(zx, zy, cx, cy, R, 0, max_iteration)
 
